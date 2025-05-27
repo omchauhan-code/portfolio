@@ -1,0 +1,545 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin sans', sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: right;
+    background: linear-gradient(135deg, #ffffff, #004e92);
+  color: white;
+}
+
+.glow-text {
+  background: linear-gradient(90deg, red, red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowGlow 20s linear infinite;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3),
+               0 0 20px rgba(255,255,255,0.3),
+               0 0 30px rgba(255,255,255,0.2);
+}
+
+@keyframes flowGlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 400% 400%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.image-content {
+    position: absolute;
+    bottom: 0;
+    right: 5%; /* Matches the padding */
+}
+
+.image-content img {
+    width: 900px; /* Increased from 450px */
+    max-width: none; /* Prevent automatic shrinking */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-content {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .image-content img {
+        width: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.logo{
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+span{
+    color: #f9004d;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+nav ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    color: #f9004d;
+    transition: .4s;
+}
+.btn{
+    background-color: #f9004d;
+    color: black;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+.content{
+    position: absolute;
+    top: 30%;
+    left: 26%;
+    transform: translate(-50%);
+}
+h1{
+    color: rgb(0, 0, 0);
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+h3{
+    color: black;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+h4{
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    letter-spacing: 2px;
+
+}
+.newslatter form{
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+.newslatter form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #f9004d;
+    outline: none;
+    border-radius: 30px;
+}
+.newslatter form input:last-child{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+   background-color: #f9004d;
+    border-radius: 30px;
+    color: black;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top: 6px;
+    right: 6px;
+}
+.about{
+    width: 100%;
+    padding: 70px 0px;
+    background-color: #191919;
+}
+.about img{
+    height: auto;
+    width: 430px;
+}
+.about-text{
+    width: 550px;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-text h2{
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.about-text h5{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+.about-text p{
+    color: rgba(255, 255, 255, 0.847);
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+.button{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+button:hover{
+    background-color: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;
+}
+.skills{
+    color: white;
+     
+      gap: 30px;
+      font-weight: 600;
+      font-size: 1.1rem;
+}
+.skills li{
+    position: relative;
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: white;
+      transition: color 0.3s ease;
+      overflow: hidden;
+}
+.skills li::after{
+    content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background: #ffffff;
+      left: 50%;
+      bottom: 0;
+      transition: width 0.3s ease, left 0.3s ease;
+      border-radius: 2px;
+}
+.skills li:hover {
+  color: #f9004d;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skills li:hover::after{
+    width: 100% fit-content;
+    left: 0;
+}
+.about.reverse .main {
+    display: flex;
+    flex-direction: row-reverse; /* Flip image and text */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.about.reverse img {
+    width: 300px; /* adjust as needed */
+}
+
+
+
+
+
+
+
+
+.service{
+    background: #191919;
+    width: 100%;
+    padding: 100px 0px;
+}
+.title h2{
+    color: white;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap; /* Prevent wrapping if you want a strict single line */
+    gap: 20px;
+    overflow-x: auto; /* Add horizontal scroll if needed on smaller screens */
+    padding: 20px;
+}
+
+.card {
+    height: auto; /* Let content define height */
+    width: 335px;
+    padding: 25px 30px;
+    background: #101010;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card h5 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.pra p {
+    color: white;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.card .button {
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: 0.4s;
+    display: inline-block;
+    margin-top: auto; /* Push button down */
+}
+.card .button:hover {
+    background-color: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;
+}
+/**/
+.contact-me{
+    width: 100%;
+    height: 290px;
+    background: #191919;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-me p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.contact-me .button-two{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: .4s;
+}
+.contact-me .button-two:hover{
+     background-color: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;
+}
+
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 55px;
+    background: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer p:nth-child(1){
+    font-size: 10px;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  
+}
+footer p:nth-child(2){
+    color: white;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+}
+.end{
+    position: absolute;
+    columns: #f9004d;
+    bottom: 10px;
+    top: 10px;
+    font-size: 1px;
+}
+/*social*/
+/* From Uiverse.io by vinodjangid07 */ 
+.card2 {
+  width: fit-content;
+  height: fit-content;
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.long{
+    
+    align-content: center;
+}
+.custom-hr {
+  border: none;
+  height: 5px;
+  width: 100%;
+  margin: 0;
+  background-color: #191919;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 0;
+  display: block;
+}
+
+.custom-hr::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f9004d, #000000, #f9004d);
+  background-size: 200% auto;
+  border-radius: 50px;
+  animation: pulseAnim 3s infinite linear;
+  box-shadow: 0 0 12px #f9004d, 0 0 24px #000000;
+  z-index: 1;
+}
+
+.custom-hr:hover::before {
+  box-shadow: 0 0 24px #f9004d, 0 0 48px #000000;
+}
+
+@keyframes pulseAnim {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
